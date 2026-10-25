@@ -1,7 +1,7 @@
 # ultasons-
 detecteur de distance utilisans le capteur hc sr04 et deux led 
 
-# Système Télémétrique à Ultrasons avec Double Signalisation (Arduino Uno)
+# Système d'evaluation de distance à Ultrasons  (Arduino Uno & hc sr04)
 
 Ce projet implémente un système d'alerte de distance embarqué basé sur un microcontrôleur **Arduino Uno**. Il utilise un capteur à ultrasons **HC-SR04** pour mesurer en temps réel la distance d'un obstacle et pilote un étage de signalisation visuelle composé de deux LED (rouge et verte) fonctionnant en logique de seuil.
 
@@ -33,7 +33,7 @@ Ce projet implémente un système d'alerte de distance embarqué basé sur un mi
 
 ---
 
-## 💻 Code Source Firmware (Arduino C++)
+## Code Source  (Arduino C++)
 
 Le script suivant configure les entrées/sorties, cadence l'émission des salves ultrasonores, calcule le temps de vol de l'onde pour en déduire la distance géométrique, et actualise l'état des actionneurs optiques :
 
