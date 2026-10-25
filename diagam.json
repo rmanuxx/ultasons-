@@ -1,0 +1,69 @@
+{
+  "version": 1,
+  "author": "Codex",
+  "editor": "wokwi",
+  "parts": [
+    { "type": "wokwi-breadboard", "id": "bb1", "top": 16.2, "left": 406, "attrs": {} },
+    { "type": "wokwi-arduino-uno", "id": "uno", "top": 279, "left": 441, "attrs": {} },
+    {
+      "type": "wokwi-hc-sr04",
+      "id": "sonar",
+      "top": -27.3,
+      "left": 639.1,
+      "attrs": { "distance": "30" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledRouge",
+      "top": 44.4,
+      "left": 839,
+      "attrs": { "color": "red" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rRouge",
+      "top": 90.65,
+      "left": 862.6,
+      "rotate": 180,
+      "attrs": { "value": "220" }
+    },
+    {
+      "type": "wokwi-led",
+      "id": "ledVerte",
+      "top": 25.2,
+      "left": 522.2,
+      "attrs": { "color": "green" }
+    },
+    {
+      "type": "wokwi-resistor",
+      "id": "rVerte",
+      "top": 71.15,
+      "left": 547.2,
+      "attrs": { "value": "220" }
+    }
+  ],
+  "connections": [
+    [ "rRouge:1", "uno:7", "green", [ "v0" ] ],
+    [ "rVerte:2", "uno:8", "green", [ "v0" ] ],
+    [ "sonar:GND", "uno:GND.1", "black", [ "v0" ] ],
+    [ "sonar:ECHO", "uno:2", "green", [ "v0" ] ],
+    [ "sonar:VCC", "uno:5V", "red", [ "v0" ] ],
+    [ "sonar:TRIG", "uno:3", "green", [ "v0" ] ],
+    [ "ledRouge:C", "bb1:bn.12", "green", [ "v0" ] ],
+    [ "ledVerte:C", "bb1:bn.10", "green", [ "v0" ] ],
+    [ "bb1:bn.50", "uno:GND.3", "black", [ "v0" ] ],
+    [ "sonar:VCC", "bb1:30t.a", "", [ "$bb" ] ],
+    [ "sonar:TRIG", "bb1:31t.a", "", [ "$bb" ] ],
+    [ "sonar:ECHO", "bb1:32t.a", "", [ "$bb" ] ],
+    [ "sonar:GND", "bb1:33t.a", "", [ "$bb" ] ],
+    [ "ledRouge:A", "bb1:46t.c", "", [ "$bb" ] ],
+    [ "ledRouge:C", "bb1:45t.c", "", [ "$bb" ] ],
+    [ "rRouge:1", "bb1:52t.d", "", [ "$bb" ] ],
+    [ "rRouge:2", "bb1:46t.d", "", [ "$bb" ] ],
+    [ "ledVerte:A", "bb1:13t.a", "", [ "$bb" ] ],
+    [ "ledVerte:C", "bb1:12t.a", "", [ "$bb" ] ],
+    [ "rVerte:1", "bb1:13t.b", "", [ "$bb" ] ],
+    [ "rVerte:2", "bb1:19t.b", "", [ "$bb" ] ]
+  ],
+  "dependencies": {}
+}
