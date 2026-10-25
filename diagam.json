@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "author": "Codex",
+  "author": "Rmanuxx",
   "editor": "wokwi",
   "parts": [
     { "type": "wokwi-breadboard", "id": "bb1", "top": 16.2, "left": 406, "attrs": {} },
